@@ -83,6 +83,14 @@ span{
     background-color:#152238 ;
     color:white;
 }
+
+.collapes{
+    display: none;
+}
+.sectionCollapedHeight{
+    min-height:10vh;
+}
+
 @media(max-width:1500px){
     section .name p{
         font-size: 25px;
