@@ -31,6 +31,7 @@ document.addEventListener('click', function(event){
     if(span.classList.contains('collapes')){
         span.classList.remove('collapes');
         sec.classList.remove('sectionCollapedHeight');
+        
     }
     else{
         span.classList.add('collapes');

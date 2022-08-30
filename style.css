@@ -67,18 +67,22 @@ span{
     color:white;
     font-size: 15px;
 }
-.left p{
-    text-align: right;
+.left .letters {
     width: 70%;
-    border-bottom:2px solid #e1ad21;
-    margin-left:30%;
-}
-.left span{
-    margin-left:45%;
     text-align: right;
-    width:100%;
-    display: inline-block;
+    margin-left: 30%;
 }
+.left .name{
+    width: 70%;
+    text-align: right;
+    margin-left: 30%;
+}
+.left .name p{
+    margin-left:0%;
+    width:100%;
+    border-bottom: 2px solid #e1ad21;
+}
+
 .active{
     background-color:#152238 ;
     color:white;
