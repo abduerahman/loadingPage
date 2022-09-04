@@ -1,7 +1,9 @@
+var navbar = document.querySelector('nav');
+
 function onScrolling(){
-    nav.style.visibility = 'visible';
+    navbar.style.visibility = 'visible';
     setTimeout(function(){
-        nav.style.visibility = 'hidden';
+        navbar.style.visibility = 'hidden';
     },5000)
 }
 
@@ -26,6 +28,7 @@ is.forEach(function(e){
 var ul = document.querySelector('ul');
 let childs = ul.children;
 ul.onclick = (e) =>{
+    onScrolling();
     let childs = ul.children;
     for(let c of childs){
         if(c.classList.contains('active')){
@@ -35,9 +38,11 @@ ul.onclick = (e) =>{
     }
     e.target.parentElement.classList.add('active');
     e.target.style.color= 'white';
+    onScrolling();
 }
 
 window.onscroll = (e) =>{
+    onScrolling();
     var element = document.body.getBoundingClientRect();
     var se = document.querySelector('section');
     let postion = Math.round(-((element.top)/ se.getBoundingClientRect().height));
