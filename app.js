@@ -1,27 +1,8 @@
-var navbar = document.querySelector('nav');
-
-navbar.addEventListener('click', function(e){
-    window.location.hash= e.target.id+'_';
-    document.querySelectorAll('navbar li').forEach(e =>{
-        if(e.classList.contains('active')){
-            e.classList.remove('active');
-        }
-    })
-    onScrolling();
-});
-
-var nav = document.querySelector('nav');
-
 function onScrolling(){
     nav.style.visibility = 'visible';
     setTimeout(function(){
         nav.style.visibility = 'hidden';
     },5000)
-}
-
-
-window.onscroll = function(e){
-    onScrolling();
 }
 
 var is = document.querySelectorAll('i');
@@ -41,3 +22,34 @@ is.forEach(function(e){
         }
     }
 })
+
+var ul = document.querySelector('ul');
+let childs = ul.children;
+ul.onclick = (e) =>{
+    let childs = ul.children;
+    for(let c of childs){
+        if(c.classList.contains('active')){
+            c.classList.remove('active');
+            c.children[0].style.color= 'black';
+        }
+    }
+    e.target.parentElement.classList.add('active');
+    e.target.style.color= 'white';
+}
+
+window.onscroll = (e) =>{
+    var element = document.body.getBoundingClientRect();
+    var se = document.querySelector('section');
+    let postion = Math.round(-((element.top)/ se.getBoundingClientRect().height));
+    let sectionName = 'section'+postion;
+    for(let i of childs){
+        if(i.id == sectionName){
+            i.classList.add('active');
+            i.children[0].style.color = 'white';
+        }
+        else if(i.classList.contains('active')){
+            i.classList.remove('active');
+            i.children[0].style.color = 'black';
+        }
+    }
+}
