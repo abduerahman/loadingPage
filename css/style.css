@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth ;
+}
+
+html{
+    height:100%;
+    background-color: #152238;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    visibility:hidden;
+    width:100%;
+    background-color: white;
+    transition: 1s ease;
+    justify-content: right;
+}
+
+/*The ul inside the nav which will be created dynamically create using js*/
+ul{
+    display: flex;
+    list-style-type: none;
+}
+
+/*The list elment inside the ul*/
+li{
+    padding:15px;
+    font-weight: 1000;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    background-color: white;
+}
+
+/*the hyperlink in the li elment*/
+a{
+    text-decoration: none;
+    color:black;
+}
+
+main{
+    padding-top:60px;
+    height:99vh;
+}
+main p{
+    color:white;
+    height: 50%;
+    margin-left:20px;
+    margin-top:10%;
+    font-size: 50px;
+}
+
+/*For each section has it's min height an it's applyed to all the sections in the html file*/
+section{
+    min-height:99vh;
+    padding:30px;
+}
+
+
+/*The section which you looking at will have this background color*/
+.active-class{
+    background: rgba(130, 255, 188, 0.2);
+}
+
+/*The code that made the circle in which you can see up to the title name of the section which you looking at*/
+.circle{
+    position: absolute;
+    width:150px;
+    height:150px;
+    border-radius: 999px;
+    background-color: inherit;
+    animation-name: circle;
+    animation: 10s linear 1s infinite alternate circle;
+}
+
+/*Here i made it's animation*/
+@keyframes circle {
+    0% {
+       transform: rotate(0deg) translateX(30px);
+    }
+    100% {
+       transform: rotate(360deg) translateX(30px);
+    }
+ }
+
+ /*The section name styling*/
+section .name p{
+    font-size: 40px;
+    color:white;
+    padding:10px;
+    padding-top :30px;
+    width: 70%;
+    border-bottom: 2px solid #e1ad21;
+}
+section .letters{
+    width:70%;
+    padding:15px;
+}
+span{
+    color:white;
+    font-size: 15px;
+}
+.rightSection .letters {
+    width: 70%;
+    text-align: right;
+    margin-left: 30%;
+}
+.rightSection .name{
+    width: 70%;
+    text-align: right;
+    margin-left: 30%;
+}
+.rightSection .name p{
+    margin-left:0%;
+    width:100%;
+    border-bottom: 2px solid #e1ad21;
+}
+
+/*this active class attached to the ul and it will give a background color to the section which you looking at*/
+.active{
+    background-color:#152238 ;
+}
+
+
+/*The hide the detial of the section which you looking at*/
+.collapes{
+    display: none;
+}
+
+/*And it gives it a hight to the content*/
+.sectionCollapedHeight{
+    min-height:10vh;
+}
+
+/*this to make the circle go to the right*/
+.right{
+    left:85%;
+}
+
+
+/*Making the website responsive*/
+@media(max-width:1000px){
+    .circle{
+        width:130px;
+        height:130px;
+    }
+    .right{
+        left:70%;
+    }
+}
+@media(max-width:500px){
+    a{
+        font-size: 8px;
+    }
+    section .name p{
+        font-size: 25px;
+    }   
+    span{
+        font-size: 10px;
+    }
+    main p{
+        font-size: 25px;
+    }
+    li{
+        font-size: 10px;
+    }
+    .circle{
+        width:80px;
+        height:80px;
+    }
+    .right{
+        left:70%;
+    }
+}
+@media(max-width:300px){
+    a{
+        font-size: 5px;
+    }
+}

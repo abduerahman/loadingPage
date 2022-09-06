@@ -4,25 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
     <title>FWD project</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li id="section1"><a href="#section1_">Section 1</a></li>
-            <li id="section2"><a href="#section2_">Section 2</a></li>
-            <li id="section3"><a href="#section3_">Section 3</a></li>
-            <li id="section4"><a href="#section4_">Section 4</a></li>
-            <li id="section5"><a href="#section5_">Section 5</a></li>
-        </ul>
-    </nav>
+    <!--Here where is ul which is hold the nav bar elments-->
+    <nav></nav>
     <main><p>Loading Page</p></main>
-    <section class="section" id="section1_" data-key="1">
+    <section  id="section1_" data-key="1">
+        <!--every div element has data-key attribute to indicate which is the active section-->
+        <div data-key="1"></div>
+        <!--the title of the class-->
         <div class="name"><p><i data-key="1" class="fa-solid fa-caret-right"></i> Section 1</p></div>
+        <!--using class letters i give to the content it's looks-->
         <div class="letters">
-            <span data-key="1">
+            <span data-key="1" >
                 When I reached Juana,
                 I followed its coastline westward and discovered it to be so large that I thought it must be the mainland of the province of Cathay.
                 And since I didn’t find any towns or villages along the coast,
@@ -57,10 +54,20 @@
                 And the nightingale was singing and so were other birds of a thousand species in the month of November wherever I went.</span>
         </div>
     </section>
-    <section class="section left" id="section2_" data-key="2">
-        <div class="name" ><p><i data-key="2" class="fa-solid fa-caret-right"></i> Section 2</p></div>
+    <!--the class rightSections control that the section will be on the right side-->
+    <section class="rightSection" id="section2_" data-key="2">
+        <!--the class right which indicate where the circle will be viewd-->
+        <!--every div element has data-key attribute to indicate which is the active section-->
+        <div data-key="2" class="right"></div>
+        <!--the title of the class-->
+        <div class="name" >
+            <p>
+                <i data-key="2" class="fa-solid fa-caret-right"></i> Section 2
+            </p>
+        </div>
+         <!--using class letters i give to the content it's looks-->
         <div class="letters">
-            <span data-key="2" class="leftSpan">
+            <span data-key="2">
                 When I reached Juana,
                 I followed its coastline westward and discovered it to be so large that I thought it must be the mainland of the province of Cathay.
                 And since I didn’t find any towns or villages along the coast,
@@ -95,8 +102,12 @@
                 And the nightingale was singing and so were other birds of a thousand species in the month of November wherever I went.</span>
         </div>
     </section>
-    <section class="section" id="section3_" data-key="3">
+    <section id="section3_" data-key="3">
+        <!--every div element has data-key attribute to indicate which is the active section-->
+        <div data-key="3"></div>
+        <!--the title of the class-->
         <div class="name"><p><i data-key="3" class="fa-solid fa-caret-right"></i> Section 3 </p></div>
+        <!--using class letters i give to the content it's looks-->
         <div class="letters">
             <span data-key="3">
                 When I reached Juana,
@@ -133,10 +144,15 @@
                 And the nightingale was singing and so were other birds of a thousand species in the month of November wherever I went.</span>
         </div>
     </section>
-    <section class="section left" id="section4_" data-key="4">
+    <!--the class rightSections control that the section will be on the right side-->
+    <section class="rightSection" id="section4_" data-key="4">
+        <!--the class right which indicate where the circle will be viewd-->
+        <!--every div element has data-key attribute to indicate which is the active section-->
+        <div data-key="4" class="right"></div>
         <div class="name"><p><i data-key="4" class="fa-solid fa-caret-right"></i> Section 4 </p></div>
+        <!--using class letters i give to the content it's looks-->
         <div class="letters">
-            <span data-key="4" class="leftSpan">
+            <span data-key="4">
                 When I reached Juana,
                 I followed its coastline westward and discovered it to be so large that I thought it must be the mainland of the province of Cathay.
                 And since I didn’t find any towns or villages along the coast,
@@ -172,45 +188,6 @@
             </span>
         </div>
     </section>
-    <section class="section" id="section5_" data-key="5">
-        <div class="name"><p><i data-key="5" class="fa-solid fa-caret-right"></i> Section 5</p></div>
-        <div class="letters">
-            <span data-key="5">
-                When I reached Juana,
-                I followed its coastline westward and discovered it to be so large that I thought it must be the mainland of the province of Cathay.
-                And since I didn’t find any towns or villages along the coast,
-                except for little clusters of people that we didn’t get a chance to speak with because they all ran away,
-                I kept sailing along the same route,
-                thinking that way I wouldn’t miss any large cities or towns.
-                And after many leagues,
-                there was nothing new and the coast was taking me to the north,
-                which was not where I wanted to go because it was still winter and I meant to sail south.
-                Besides, the wind was against me.
-                I decided not to wait any longer and turned back as far as a certain harbor,
-                from which I sent two men inland to find out if there was a king or any large cities.
-                They traveled for three days and found an infinite number of little villages and countless people,
-                   but no political organization, so they returned.
-    
-                I kept hearing from some Indians whom we had taken that this land was one island after another,
-                so I followed the coastline eastward a hundred and seven leagues to where it ended,
-                from which point I saw another island to the east,
-                ten or eight leagues off, which I named Española,
-                and I went to it and continued along the northern side for a hundred seventy-eight great leagues straight east,
-                as with Juana. This island is magnificent, as are all the others,
-                but this one excessively so. Here there are many harbors along the sea coast with nothing that I know of in Christendom to compare them with,
-                and plenty of rivers that are marvelously large and good. Both islands rise well above sea-level,
-                with many mountain ranges and high mountain peaks—nothing on the island of Centrefrei comparable to them—all beautiful,
-                with a thousand different formations,
-                all accessible and full of trees of a thousand species that are tall and seem to reach to heaven.
-                And I have been told they never lose their leaves,
-                which I can believe,
-                because I saw them as green and beautiful as trees in May in Spain.
-                Some have flowers; some, fruit; others,
-                in other stages according to their nature.
-                And the nightingale was singing and so were other birds of a thousand species in the month of November wherever I went.</span>
-        </div>
-    </section>
-    
-    <script src="./app.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
