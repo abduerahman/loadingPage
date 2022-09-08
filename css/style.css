@@ -37,10 +37,6 @@ li{
 }
 
 /*the hyperlink in the li elment*/
-a{
-    text-decoration: none;
-    color:black;
-}
 
 main{
     padding-top:60px;
@@ -75,6 +71,7 @@ section{
     background-color: inherit;
     animation-name: circle;
     animation: 10s linear 1s infinite alternate circle;
+    z-index: -1;
 }
 
 /*Here i made it's animation*/
@@ -122,7 +119,8 @@ span{
 
 /*this active class attached to the ul and it will give a background color to the section which you looking at*/
 .active{
-    background-color:#152238 ;
+    background:#152238;
+    color:white;
 }
 
 
