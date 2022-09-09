@@ -1,9 +1,8 @@
 var navbar = document.querySelector('nav');
-const sections = document.querySelectorAll('section');
+var sections = document.querySelectorAll('section');
 
 // this to create the navber elment
-let ul = document.createElement('ul');
-
+var ul = document.createElement('ul');
 for (let i = 1; i <= sections.length; i++) {
     //create a list
     let li = document.createElement('li')
@@ -25,26 +24,26 @@ function removeClass(iterators, className) {
     })
 }
 
-
-
 // it give for the active section it's properties
 function activeSection(postion) {
     // get the section id
-    const sectionId = 'section' + postion + '_';
+    let sectionId = 'section' + postion + '_';
 
     //removes the active-class from sections
     removeClass(sections, 'active-class');
     //removes the circle class fomr sections
     removeClass(sections, 'circle');
     //gets the list with a perticular element
-    var lis = document.querySelector(`li[data-key="${postion}"]`);
+    var lis = document.querySelector(
+                `li[data-key="${postion}"]`);
     //remove the active class from lists
     removeClass(lists, 'active');
     //Adding active list to the list you click on
     lis.classList.add('active');
     //makes the viewd sections look active by adding active-class and circle
     var section = document.querySelector(`#${sectionId}`);
-    var div = document.querySelector(`div[data-key="${postion}"]`);
+    var div = document.querySelector(
+                `div[data-key="${postion}"]`);
     section.classList.add('active-class');
     div.classList.add('circle');
 }
@@ -52,17 +51,20 @@ function activeSection(postion) {
 
 // This function return which postion you are looking for
 function getPosition() {
-    const element = document.body.getBoundingClientRect();
-    const se = document.querySelector('section').getBoundingClientRect().height;
+    let element = document.body.getBoundingClientRect();
+    let se = document.querySelector('section')
+                    .getBoundingClientRect().height;
     return Math.round(-((element.top) / se));
 }
 
-let lists = document.querySelectorAll('li');
+var lists = document.querySelectorAll('li');
 ul.addEventListener('click', function(event) {
     //removeClass it remove a class from a specfic iterators
     removeClass(lists, 'active');
     event.target.classList.add('active');
-    var elemnt = document.querySelector(`#${event.target.id+'_'}`);
+    var elemnt = document.
+                querySelector(`#${event.target.id+'_'}`);
+
     activeSection(elemnt.getAttribute('data-key'));
     //remove the scroll event
     document.removeEventListener('scroll', scrolling);
@@ -76,10 +78,14 @@ ul.addEventListener('click', function(event) {
 
 
     // calculate the time it will take to go to the sectin you click on in the navbar
-    const currentPosition = getPosition();
-    const currentHeight = document.querySelector('section').getBoundingClientRect().height;
-    const nextPosition = elemnt.getAttribute('data-key');
-    const settime = ((Math.abs(currentPosition - nextPosition)) * currentHeight) / 2.6;
+    let currentPosition = getPosition();
+    let currentHeight = document.querySelector('section').
+                    getBoundingClientRect().height;
+
+    let nextPosition = elemnt.getAttribute('data-key');
+
+    let settime = ((Math.abs(currentPosition - nextPosition)) *
+                         currentHeight) / 2.6;
 
     setTimeout(function() {
         document.addEventListener('scroll', scrolling);
@@ -98,11 +104,14 @@ function onScrolling() {
 }
 
 // this elment in which by click on will hide the detail of a section
-let is = document.querySelectorAll('i');
+var is = document.querySelectorAll('i');
 is.forEach(function(e) {
     e.onclick = () => {
-        var span = document.querySelector(`span[data-key='${event.target.getAttribute('data-key')}']`);
-        var sec = document.querySelector(`section[data-key='${event.target.getAttribute('data-key')}']`);
+        let span = document.querySelector(
+                    `span[data-key='${event.target.getAttribute('data-key')}']`);
+        let sec = document.querySelector(  
+                    `section[data-key='${event.target.getAttribute('data-key')}']`);
+
         // it use the css class collapes to hide and to give it a less hight using  sectionCollapedHeight css class
 
         if (span.classList.contains('collapes')) {
