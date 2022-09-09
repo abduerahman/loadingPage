@@ -10,7 +10,7 @@ This project contains a navbar and contains any number of sections you want, but
               **1:** To add more sections please realize there is a left section or a right section, by default way the section has to be a left section, but you can                                             change this to right by adding to the section class ''rightSection".
               **2:** You have to see the last section data-key and once you know that key you can increment it by one to give you the new data-key which will be available                                    for your new section.
               **3:** You must give it a name " 'section' + data-key"
-              **4:** In the circle class, while you build your section you must add a div class and give it a data-key and if the section is a right section you can give                                         it class "right"
+              - **4:** In the circle class, while you build your section you must add a div class and give it a data-key and if the section is a right section you can give                                         it class "right"
 **This the home page which you will see when you load the page:**
 
 ![home](images/home.png)
@@ -34,6 +34,3 @@ and the navbar shows when you scrolling and it looks like this:**
 #I used HTML and CSS and JavaScript to build this project
 
 #Auther [Abdelrhman](https://twitter.com/Abdel_Elnabwi)
-
-
-
