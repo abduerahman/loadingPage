@@ -33,4 +33,7 @@ and the navbar shows when you scrolling and it looks like this:**
 
 #I used HTML and CSS and JavaScript to build this project
 
+#credits:</br>
+[Udacity](https://www.udacity.com/)
+
 #Auther [Abdelrhman](https://twitter.com/Abdel_Elnabwi)
