@@ -1,8 +1,8 @@
-var navbar = document.querySelector('nav');
-var sections = document.querySelectorAll('section');
+let navbar = document.querySelector('nav');
+let sections = document.querySelectorAll('section');
 
 // this to create the navber elment
-var ul = document.createElement('ul');
+let ul = document.createElement('ul');
 for (let i = 1; i <= sections.length; i++) {
     //create a list
     let li = document.createElement('li')
@@ -27,22 +27,22 @@ function removeClass(iterators, className) {
 // it give for the active section it's properties
 function activeSection(postion) {
     // get the section id
-    let sectionId = 'section' + postion + '_';
+    const sectionId = 'section' + postion + '_';
 
     //removes the active-class from sections
     removeClass(sections, 'active-class');
     //removes the circle class fomr sections
     removeClass(sections, 'circle');
     //gets the list with a perticular element
-    var lis = document.querySelector(
+    let lis = document.querySelector(
                 `li[data-key="${postion}"]`);
     //remove the active class from lists
     removeClass(lists, 'active');
     //Adding active list to the list you click on
     lis.classList.add('active');
     //makes the viewd sections look active by adding active-class and circle
-    var section = document.querySelector(`#${sectionId}`);
-    var div = document.querySelector(
+    let section = document.querySelector(`#${sectionId}`);
+    let div = document.querySelector(
                 `div[data-key="${postion}"]`);
     section.classList.add('active-class');
     div.classList.add('circle');
@@ -51,18 +51,18 @@ function activeSection(postion) {
 
 // This function return which postion you are looking for
 function getPosition() {
-    let element = document.body.getBoundingClientRect();
-    let se = document.querySelector('section')
+    const element = document.body.getBoundingClientRect();
+    const se = document.querySelector('section')
                     .getBoundingClientRect().height;
     return Math.round(-((element.top) / se));
 }
 
-var lists = document.querySelectorAll('li');
+let lists = document.querySelectorAll('li');
 ul.addEventListener('click', function(event) {
     //removeClass it remove a class from a specfic iterators
     removeClass(lists, 'active');
     event.target.classList.add('active');
-    var elemnt = document.
+    let elemnt = document.
                 querySelector(`#${event.target.id+'_'}`);
 
     activeSection(elemnt.getAttribute('data-key'));
@@ -78,13 +78,13 @@ ul.addEventListener('click', function(event) {
 
 
     // calculate the time it will take to go to the sectin you click on in the navbar
-    let currentPosition = getPosition();
-    let currentHeight = document.querySelector('section').
+    const currentPosition = getPosition();
+    const currentHeight = document.querySelector('section').
                     getBoundingClientRect().height;
 
     let nextPosition = elemnt.getAttribute('data-key');
 
-    let settime = ((Math.abs(currentPosition - nextPosition)) *
+    const settime = ((Math.abs(currentPosition - nextPosition)) *
                          currentHeight) / 2.6;
 
     setTimeout(function() {
@@ -104,7 +104,7 @@ function onScrolling() {
 }
 
 // this elment in which by click on will hide the detail of a section
-var is = document.querySelectorAll('i');
+let is = document.querySelectorAll('i');
 is.forEach(function(e) {
     e.onclick = () => {
         let span = document.querySelector(
